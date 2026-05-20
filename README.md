@@ -50,6 +50,17 @@ Restart `npm run dev` after changing `frontend/.env`.
 
 Open [http://localhost:3000](http://localhost:3000)
 
+### Vercel (two deployment options)
+
+| Vercel project | Root Directory | Config file | What it deploys |
+|----------------|----------------|-------------|-----------------|
+| **A — Monorepo** | `.` (repo root) | `vercel.json` | Runs `cd frontend && npm run build`, serves `frontend/dist` |
+| **B — Frontend only** | `frontend` | `frontend/vercel.json` | Vite build from package root; SPA rewrites |
+
+Create **two Vercel projects** linked to the same Git repo if you want separate URLs (e.g. staging vs production), or one project using **A** for the UI.
+
+**Backend (FastAPI):** deploy separately (Railway, Render, Fly.io, etc.). Set `VITE_API_URL` in the Vercel project **Environment Variables** to that API origin (no trailing slash).
+
 ### 4. Configure `.env`
 
 
