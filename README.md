@@ -71,6 +71,18 @@ Create **two Vercel projects** linked to the same Git repo if you want separate 
 | `DB_URL`             | MySQL connection string                                                                                                                                      |
 | `SMTP_`*             | Gmail: use an **App Password**, not your normal password (see below)                                                                                      |
 
+### Turso (optional, when using SQLite mode)
+
+If you want managed SQLite (Turso/libSQL) instead of local `email_agent.db`:
+
+```env
+USE_SQLITE=true
+TURSO_DATABASE_URL=libsql://your-db-name.turso.io
+TURSO_AUTH_TOKEN=your_turso_auth_token
+```
+
+Then restart the backend. Keep `DB_URL` for MySQL mode only.
+
 ### Gmail SMTP (fix “535 Username and Password not accepted”)
 
 1. Turn on **2-Step Verification** on the Google account.

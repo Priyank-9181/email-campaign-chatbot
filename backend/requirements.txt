@@ -11,3 +11,4 @@ httpx==0.28.1
 pandas==2.2.3
 python-multipart==0.0.20
 cryptography==44.0.0
+sqlalchemy-libsql==0.2.0
