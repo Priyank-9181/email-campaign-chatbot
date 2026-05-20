@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+email_agent.db
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+backend/.env
+backend/venv/
+
+# logs
+logs/
+Ai email marketing agent plan.md
+# IDE
+.idea/
+.vscode/
